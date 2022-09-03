@@ -8,6 +8,7 @@
   --nav-button-color: #f5f4fa;
   --additional-color-first: #eeeeee;
   --additional-color-second: #ececec;
+  --icon-color: #AFB1B8;
 }
 
 
@@ -24,15 +25,6 @@ body {
   letter-spacing: 0.03em;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  
-}
-
 
 h1,
 h2,
@@ -44,6 +36,18 @@ p {
   margin: 0;
   padding: 0;
 }
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  
+}
+
+
 
 .img
 {
@@ -59,9 +63,14 @@ section {
 }
 
 
-
 .address {
   font-style: inherit;
+  margin-top: 20px;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 .visually-hidden {
@@ -148,27 +157,37 @@ section {
 .header-contacts {
   display: flex;
   margin-left: auto;
-  
-}
-.header-contacts .item + .item {
-  margin-left: 50px;
+  color: var(--title-text-color);
 }
 
-.logo-header {
-  margin-right: 93px;
+.contact-item:first-child {
+  margin-right: 50px;
+}
 
-  font-size: 26px;
-  line-height: 1.2;
+
+/* Іконки хедеру */
+.contact-icon {
+  align-items: center;
+  fill: currentColor;
+  margin-right: 10px;
 }
-.logo-footer {
-  font-size: 26px;
-  line-height: 1.2;
-  text-decoration: none;
+
+.mailbox {
+  width: 16px;
+  height: 12px;
 }
+.smartphone {
+  width: 10px;
+  height: 16px;
+}
+
 .logo-link {
+  margin-right: 93px;
   color: var(--accent-color);
   font-family: Raleway;
   text-decoration: none;
+  font-size: 26px;
+  line-height: 1.2;
 }
 
 .logo-black {
@@ -195,16 +214,19 @@ section {
   letter-spacing: 0.02em;
 }
 .contact.link {
-  display: block;
+  display: flex;
   margin-left: auto;
-
+  align-items:center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
   color: var(--title-text-color);
   letter-spacing: 0.02em;
 }
-
+.contact.link:hover,
+.contact.link:focus {
+  color: var(--accent-color);
+}
 
 /*Заголовок*/
 
@@ -212,8 +234,17 @@ section {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-
-  background-color: var(--cover-footer-color);
+  max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 1px solid black;
+    background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4),
+     rgba(47, 48, 58, 0.4)), url(../images/Background-hero.png);;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--cover-footer-color);
 }
 
 .hero-title {
@@ -247,13 +278,46 @@ section {
 }
 .features-list {
   display: flex;
-  width: 1170px;
   gap: 30px;
   
 }
+
+.features-item::before {
+  display: block;
+  content: " ";
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color:var(--nav-button-color);
+  border-radius: 4px;
+  background-size: 70px 70px;
+  margin-bottom: 30px;
+}
+
+.icon-antenna::before {
+  background-image: url(../Images/antenna.svg);
+  left: 3.35%;
+    right: 3.35%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.icon-clock::before {
+  background-image: url(../Images/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../Images/diagram.svg);
+}
+
+
+.icon-astronaut::before {
+  background-image: url(../Images/astronaut.svg);
+
+}
 .features-name {
   margin-bottom: 10px;
-
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1;
@@ -276,7 +340,6 @@ section {
 
 .spec-head{
   margin-bottom: 50px;
-
   font-weight: 700;
   font-size: 36px;
   line-height: 1.2;
@@ -291,7 +354,10 @@ section {
 }
 .team-list {display: flex;
 }
-
+.team-container {
+  padding: 30px 0;
+  text-align: center;
+}
 .team-head {
   margin-bottom: 50px;
   font-size: 36px;
@@ -308,11 +374,34 @@ section {
 .team-item:not(:last-child) {
   margin-right: 30px;
 }
-.team-container {
-  padding: 30px 0;
-  
-  text-align: center;}
+.team-social {
+display: flex;
+justify-content: center;
+gap: 10px;
+margin-top: 16px;
+}
+.social-link,
+.footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--main-background-color);
+  color: var(--icon-color);
+}
 
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  color: var(--main-background-color);
+}
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
 .name {
   margin-bottom: 10px;
 
@@ -328,6 +417,50 @@ section {
   color: var(--title-text-color);
 }
 
+/* Постійні клієнти */
+
+.clients-head {
+font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px ;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.clients-item {
+  margin-right: 3opx;
+}
+.clients-link
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border-radius: 50%;
+  background-color: var(--main-background-color);
+  fill: var(--icon-color);
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.clients-icon {
+  width: 106px;
+  height: 60px;
+}
 /*Button*/
 button {
   display: block;
@@ -369,9 +502,7 @@ button {
 }
 
 .header .link:hover,
-.header .link:focus,
-.footer .link:hover,
-.footer .link:focus {
+.header .link:focus {
   color: var(--accent-color);
 }
 
@@ -381,17 +512,52 @@ button {
   padding: 60px 0;
 
 }
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
 .footer-logo {
   display: inline-block;
-  margin-bottom: 20px;
-
   color: var(--main-background-color);
   font-family: Raleway;
 }
 
+.footer-title {
+  margin-bottom: 20px;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--main-background-color);
+}
+.footer-list {
+    display: flex;
+    justify-items: center;
+    gap: 10px;
+    }
+.footer-links {
+margin-left: 70px;
+}
+
+.footer-link {
+  color: var(--main-background-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-link:hover,
+.footer-link:focus {
+  background-color: var(--accent-color);
+}
 .address-item:not(:last-child) {
   margin-bottom: 10px;
 }
+
+.address .link:hover,
+.address .link:focus {
+  color: var(--accent-color);
+}
+
+
+
 /*Портфоліо*/
 
 
@@ -404,9 +570,6 @@ button {
 .project-button {
   display: inline-block;
   padding: 6px 22px;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-
   font-family: inherit;
   font-size: 16px;
   font-weight: 500;
@@ -425,6 +588,8 @@ button {
 .project-button:focus {
   background-color: var(--accent-color);
   color: var(--main-background-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .flex-container {
   display: flex;
@@ -440,10 +605,8 @@ button {
   margin-right: 30px;
   margin-bottom: 30px;
   width: 370px;
-
-  border: 1px solid #EEEEEE;
-  background-color: var(--main-background-color)
 }
+
 .project-name {
   margin-bottom: 4px;
 
@@ -456,13 +619,22 @@ button {
 .project-container {
   padding: 20px 24px;
   border-top: none;
-}
+  border: 1px solid #EEEEEE;
+    }
+
+
 .project-desc {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+}
+.project-link:hover,
+.project-link:focus {
+  display: block;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 
