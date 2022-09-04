@@ -395,11 +395,6 @@ margin-top: 16px;
   background-color: var(--accent-color);
   color: var(--main-background-color);
 }
-.social-icon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
 .name {
   margin-bottom: 10px;
 
