@@ -203,8 +203,7 @@ section {
 .nav.link{
   display: block;
 }
-.nav.link,
-.contact.link {
+.nav.link{
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -213,7 +212,7 @@ section {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.contact.link {
+.contact-link {
   display: flex;
   margin-left: auto;
   align-items:center;
@@ -223,8 +222,8 @@ section {
   color: var(--title-text-color);
   letter-spacing: 0.02em;
 }
-.contact.link:hover,
-.contact.link:focus {
+.contact-link:hover,
+.contact-link:focus {
   color: var(--accent-color);
 }
 
@@ -239,7 +238,7 @@ section {
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4),
-     rgba(47, 48, 58, 0.4)), url('../Images/background-image.jpg');
+     rgba(47, 48, 58, 0.4)), url('../Images/background-hero.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
