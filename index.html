@@ -135,7 +135,7 @@
             <li class="team-item item">
               <img class="team-img" src="./Images/img-3.jpg" alt="Ігор Дем'яненко" width="270" />
               <div class="team-container">
-                <h3 class="team-header name">Ігор Дем'яненко</h3>
+                <h3 class="team-name">Ігор Дем'яненко</h3>
                 <p class="team-text desc">Product Designer</p>
                 <ul class="team-social list">
                   <li class="social-item">
@@ -196,7 +196,7 @@
             <li class="team-item item">
               <img class="team-img" src="./Images/img-2.jpg" alt="Ольга Рєпіна" width="270" />
               <div class="team-container">
-                <h3 class="team-header name">Ольга Рєпіна</h3>
+                <h3 class="team-name">Ольга Рєпіна</h3>
                 <p class="team-desc desc">Frontend Developer</p>
                 <ul class="team-social list">
                   <li class="social-item">
@@ -257,7 +257,7 @@
             <li class="team-item item">
               <img class="team-img" src="./Images/img-1.jpg" alt="Микола Тарасов" width="270" />
               <div class="team-container">
-                <h3 class="team-header name">Микола Тарасов</h3>
+                <h3 class="team-name">Микола Тарасов</h3>
                 <p class="team-text desc">Marketing</p>
                 <ul class="team-social list">
                   <li class="social-item">
@@ -318,7 +318,7 @@
             <li class="team-item item">
               <img class="team-img" src="./Images/img.jpg" alt="Михайло Єрмаков" width="270" />
               <div class="team-container">
-                <h3 class="team-header name">Михайло Єрмаков</h3>
+                <h3 class="team-name">Михайло Єрмаков</h3>
                 <p class="team-text desc">UI Designer</p>
                 <ul class="team-social list">
                   <li class="social-item">
@@ -553,11 +553,60 @@
             </li>
           </ul>
         </div>
+        <div class="footer-form-container">
+          <p class="footer-form-title">Підпишіться на розсилку</p>
+          <form class="footer-form" name="footer-form" autocomplete="on">
+          <label class="footer-label">
+            <input class="footer-input" name="email" type="email" placeholder="E-mail" required>
+            <button class="footer-form-btn" type="submit">Підписатися
+              <svg class="footer-form-icon">
+                <use href="./Images/icons.svg#telegram"></use>
+                </svg>
+            </button>
+            </label>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- Модалка -->
     <div class="hero-backdrop is-hidden" data-modal>
-      <div class="hero-modal">
+      <div class="hero-modal">    
+            <!-- Форма -->
+    <form class="modal-form" autocomplete="on">
+      <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
+      <label class="form-label">
+        <span class="form-name">Ім'я</span>
+      <input class="form-input" type="text" name="name" autofocus required>
+      <svg class="form-icon">
+        <use href="./Images/icons.svg#name"></use>
+      </svg></label>
+      <label class="form-label">
+        <span class="form-name">Телефон</span>
+      <input class="form-input" type="tel" name="tel" required> 
+      <svg class="form-icon">
+        <use href="./Images/icons.svg#phone"></use>
+      </svg></label>
+      <label class="form-label">
+        <span class="form-name">Пошта</span>
+      <input class="form-input" type="email" name="mail" required>  
+      <svg class="form-icon">
+        <use href="./Images/icons.svg#email"></use>
+      </svg></label>
+      <label class="form-textarea-label">
+        <span class="form-name">Коментар</span>
+      <textarea class="form-textarea" name="comment" rows="10" 
+      placeholder="Введіть текст"></textarea>
+    </label>
+      <label class="form-agree-label">
+        <input class="form-agree visually-hidden" type="checkbox" name="agree">
+        <span class="agree-block"></span>
+        <span class="agree-text">Погоджуюся з розсилкою та приймаю 
+      <a class="form-conditions" href="#" target="_blank" rel="noreferrer noopener nofollow">Умови договору</a>
+      </span>
+    </label>
+      <button class="form-send-btn" type="submit">Відправити</button>
+    </form>
+      <!-- Кнопка закриття -->
         <button class="x-btn" type="button" data-modal-close>
           <svg class="x-btn-svg" width="18px" height="18px">
             <use href="./Images/symbol-defs.svg#x-icon"></use>
@@ -565,6 +614,10 @@
         </button>
       </div>
     </div>
+
+  <!-- <div role="group"></div> - фікс для fieldset  -->
+    
+    <!-- JavaScript -->
     <script src="./js/modal.js"></script>
   </body>
 </html>
